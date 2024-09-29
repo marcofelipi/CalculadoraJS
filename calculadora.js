@@ -1,33 +1,33 @@
 $("#porcentagem").click(function () 
 {
     var texto = document.getElementById("inputTexto").value;
-    texto = texto + "%";
+    texto = texto + "%"; //concatena string com variavel. vai imprimir NUM1%NUM2 quando for clicado no outro num
     document.getElementById("inputTexto").value = texto;
 });
 
 $("#btnLimpaImput").click(function () 
 {
-    document.getElementById("inputTexto").value = "";
+    document.getElementById("inputTexto").value = ""; //seta valor do imput texto pra vazio
 });
 
 $("#btnLimpaTudo").click(function () 
 {
-    document.getElementById("lista-historico").value = "";
-    document.getElementById("inputTexto").value = "";
+    document.getElementById("lista-historico").value = ""; //seta valor do historico pra vazio
+    document.getElementById("inputTexto").value = ""; //seta valor do imput texto pra vazio
 });
 
 $("#btnVirgula").click(function () 
 {
     var texto = document.getElementById("inputTexto").value;
-    texto = texto + ".";
+    texto = texto + "."; //usa ponto no sistema americano
     document.getElementById("inputTexto").value = texto;
 });
 
 $("#btn0").click(function () 
 {
-    var texto = document.getElementById("inputTexto").value;
-    texto = texto + "0";
-    document.getElementById("inputTexto").value = texto;
+    var texto = document.getElementById("inputTexto").value; //recupera do ID input o valor e coloca numa variavel pra ser possivel fazer operacoes
+    texto = texto + "0"; //funcao de cada botao
+    document.getElementById("inputTexto").value = texto;//coloca no campo input texto a variavel atualizada
 });
 
 $("#btn1").click(function () 
@@ -97,11 +97,12 @@ $("#btnSoma").click(function ()
 {
     var texto = document.getElementById("inputTexto").value;
     var posicao = texto.indexOf("+");
-    if (posicao == -1) 
+    if (posicao == -1) // se posicao for antes do segundo numero
     {
         texto = texto + "+";
         document.getElementById("inputTexto").value = texto;
-    } else 
+    } 
+    else 
     {
         alert("+ já foi inserido! Selecione o botão de =");
     }
@@ -187,12 +188,12 @@ $("#btnIgual").click(function ()
         return;
     }
 
-    // Atualiza o input com o resultado
+    //atualiza o input com o resultado
     document.getElementById("inputTexto").value = resultado;
 
-    // Adiciona ao histórico
+    //adiciona no histórico
     historico += texto + " = " + resultado + "\n";
     document.getElementById("lista-historico").value = historico;
-    
+
 });
 
