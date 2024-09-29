@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário para Calculadora - 18º Exemplo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="calculadora.js" defer></script>
+    <style>
+        .form {
+            width: auto;
+        }
+
+        .formcontrol {
+            margin: 10px;
+
+        }
+
+        .botao {
+            width: 59px;
+            height: 20px;
+        }
+
+        #contorno {
+            border: 1px solid black;
+            width: 270px;
+            margin-top: 10%;
+            margin-left: 45%;
+            margin-right: 20%;
+            background-color: rgb(192, 192, 192);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="contorno">
+
+
+        <div class="form">
+
+            <div class="formcontrol">
+                <textarea id="lista-historico" readonly rows="4" cols="31" style="margin-bottom: 1%;"></textarea>
+                <input type="text" value="" id="inputTexto" readonly size="30">
+            </div>
+            <div class="formcontrol">
+                <input type="button" value="7" id="btn7" class="botao">
+                <input type="button" value="8" id="btn8" class="botao">
+                <input type="button" value="9" id="btn9" class="botao">
+                <input type="button" value="+" id="btnSoma" class="botao">
+            </div>
+            <div class="formcontrol">
+                <input type="button" value="4" id="btn4" class="botao">
+                <input type="button" value="5" id="btn5" class="botao">
+                <input type="button" value="6" id="btn6" class="botao">
+                <input type="button" value="-" id="btnSubtracao" class="botao">
+            </div>
+
+            <div class="formcontrol">
+                <input type="button" value="1" id="btn1" class="botao">
+                <input type="button" value="2" id="btn2" class="botao">
+                <input type="button" value="3" id="btn3" class="botao">
+                <input type="button" value="/" id="btnDivisao" class="botao">
+            </div>
+            <div class="formcontrol">
+                <input type="button" value="0" id="btn0" class="botao">
+                <input type="button" value="," id="btnVirgula" class="botao">
+                <input type="button" value="C" id="btnLimpaImput" class="botao">
+                <input type="button" value="*" id="btnMultiplicacao" class="botao">
+            </div>
+            <div class="formcontrol">
+                <input type="button" value="=" id="btnIgual" class="botao">
+                <input type="button" value="CE" id="btnLimpaTudo" class="botao">
+                <input type="button" value="X²" id="btnPotenciaQuadrado" class="botao">
+                <input type="button" value="%" id="btnPorcentagem" class="botao">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+
+
+</html>
